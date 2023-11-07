@@ -19,20 +19,20 @@
         alt_tab_tricks_back: alt_tab_tricks_back {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_TAB_TRICKS_BACK";
-            bindings = <&kp D>, <&Shift_Tab>;
+            bindings = <&kp F>, <&Shift_Tab>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RSFT)>;
-            keep-mods = <(MOD_LALT|MOD_RSFT)>;
+            mods = <(MOD_RALT|MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL|MOD_RALT)>;
         };
         alt_tab_tricks_forward: alt_tab_tricks_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_TAB_TRICKS_FORWARD";
-            bindings = <&kp T>, <&kp TAB>;
+            bindings = <&kp G>, <&kp TAB>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_LALT|MOD_RSFT)>;
-            mods = <(MOD_LALT|MOD_RSFT)>;
+            keep-mods = <(MOD_RALT|MOD_LCTL)>;
+            mods = <(MOD_RALT|MOD_LCTL)>;
         };
     };
 
