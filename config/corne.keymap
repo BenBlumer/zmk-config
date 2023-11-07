@@ -16,6 +16,33 @@
             #binding-cells = <0>;
             bindings = <&kp SEMICOLON>, <&kp SQT>;
         };
+        alt_tab_tricks_back: alt_tab_tricks_back {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_TAB_TRICKS_BACK";
+            bindings = <&kp D>, <&Shift_Tab>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RSFT)>;
+            keep-mods = <(MOD_LALT|MOD_RSFT)>;
+        };
+        alt_tab_tricks_forward: alt_tab_tricks_forward {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_TAB_TRICKS_FORWARD";
+            bindings = <&kp T>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LALT|MOD_RSFT)>;
+            mods = <(MOD_LALT|MOD_RSFT)>;
+        };
+    };
+
+    macros {
+        Shift_Tab: Shift_Tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(TAB)>;
+            label = "SHIFT_TAB";
+        };
     };
 
     keymap {
@@ -29,10 +56,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E               &kp R            &kp T                 &kp Y    &kp U         &kp I              &kp O    &kp P              &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D               &kp F            &kp G                 &kp H    &kp J         &kp K              &kp L    &quote_from_colon  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C               &kp V            &kp B                 &kp N    &kp M         &kp COMMA          &kp DOT  &kp FSLH           &kp ESC
-                         &mt LEFT_SHIFT TAB  &lt 1 BACKSPACE  &mt LEFT_ALT SPACE    &kp RET  &lt 2 DELETE  &kp RIGHT_CONTROL
+&kp TAB    &kp Q            &kp W               &kp E                 &kp R                    &kp T                 &kp Y    &kp U         &kp I              &kp O    &kp P              &kp BSPC
+&kp LCTRL  &mt RIGHT_ALT A  &mt LEFT_CONTROL S  &alt_tab_tricks_back  &alt_tab_tricks_forward  &kp G                 &kp H    &kp J         &kp K              &kp L    &quote_from_colon  &kp SQT
+&kp LSHFT  &kp Z            &kp X               &kp C                 &kp V                    &kp B                 &kp N    &kp M         &kp COMMA          &kp DOT  &kp FSLH           &kp ESC
+                                                &mt LEFT_SHIFT TAB    &lt 1 BACKSPACE          &mt LEFT_ALT SPACE    &kp RET  &lt 2 DELETE  &kp RIGHT_CONTROL
             >;
         };
 
