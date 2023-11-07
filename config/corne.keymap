@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTE_FROM_COLON";
             #binding-cells = <0>;
-            bindings = <&kp APOSTROPHE>;
+            bindings = <&kp SEMICOLON>, <&kp SQT>;
         };
     };
 
