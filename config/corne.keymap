@@ -19,7 +19,7 @@
         alt_tab_tricks_back: alt_tab_tricks_back {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_TAB_TRICKS_BACK";
-            bindings = <&kp F>, <&Shift_Tab>;
+            bindings = <&kp D>, <&Shift_Tab>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT|MOD_LCTL)>;
@@ -28,7 +28,7 @@
         alt_tab_tricks_forward: alt_tab_tricks_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_TAB_TRICKS_FORWARD";
-            bindings = <&kp G>, <&kp TAB>;
+            bindings = <&kp F>, <&kp TAB>;
 
             #binding-cells = <0>;
             keep-mods = <(MOD_RALT|MOD_LCTL)>;
