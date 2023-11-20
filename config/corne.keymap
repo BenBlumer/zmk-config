@@ -20,6 +20,7 @@
             #binding-cells = <0>;
             bindings = <&kp SEMICOLON>, <&kp SQT>;
         };
+
         alt_tab_tricks_back: alt_tab_tricks_back {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_TAB_TRICKS_BACK";
@@ -29,6 +30,7 @@
             mods = <(MOD_RALT|MOD_LCTL)>;
             keep-mods = <(MOD_LCTL|MOD_RALT)>;
         };
+
         alt_tab_tricks_forward: alt_tab_tricks_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_TAB_TRICKS_FORWARD";
@@ -38,6 +40,7 @@
             keep-mods = <(MOD_RALT|MOD_LCTL)>;
             mods = <(MOD_RALT|MOD_LCTL)>;
         };
+
         activate_on_hold: activate_on_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "ACTIVATE_ON_HOLD";
@@ -85,10 +88,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans        &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE     &kp RET   &trans    &kp RALT
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&kp LSHFT   &bt BT_CLR    &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
+                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
             >;
         };
 
